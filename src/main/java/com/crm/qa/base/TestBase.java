@@ -47,8 +47,6 @@ public class TestBase {
 			System.setProperty("webdriver.gecko.driver", currentDir+ "/geckodriver");	
 			driver = new FirefoxDriver(); 
 		}
-
-        
 		e_driver = new EventFiringWebDriver(driver);
 		// creating object of EventListerHandler to register it with EventFiringWebDriver
 		eventListener = new WebEventListener();
@@ -58,17 +56,7 @@ public class TestBase {
 		//driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
-		
 		driver.get(prop.getProperty("url"));
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-
 }
